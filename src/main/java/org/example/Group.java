@@ -11,21 +11,24 @@ public class Group {
         Group.students = students;
     }
 
+    // вывод группу в консоль
     public void print() {
         students.forEach(Student::print);
     }
 
-
+    // добавить рандомную оценку рандомному студенту
     public static void gradeRandomStudent() {
         Student st = students.get(ThreadLocalRandom.current().nextInt(0, students.size()));
         Integer grade = ThreadLocalRandom.current().nextInt(0, 11);
         st.addGrade(grade);
     }
 
+    // вывести студентов с оценками в консоль
     public static void showGradedStudents() {
         students.forEach(Student::printIfGraded);
     }
 
+    // создать группу студентов
     public static Group createGroup() {
         ArrayList<Student> students = new ArrayList<Student>();
         int ch;

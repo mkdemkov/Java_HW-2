@@ -11,13 +11,14 @@ public class Task1 {
         process();
     }
 
-
+    // вывод подсказок в консоль
     private static void showHints() {
         System.out.println("Вы можете ввести команду \"/r\", чтобы поставить рандомному студенту рандомную оценку, " +
                 "команду \"/l\", чтобы показать список студентов с оценками, \"/e\", чтобы выйти, \"/h\", " +
                 "чтобы показать подсказку");
     }
 
+    // запускаем решение задачи
     private static void process() {
         String command;
         while (!(command = scanner.nextLine()).replaceAll(" ", "").equals("/e")) {
